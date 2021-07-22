@@ -1,11 +1,11 @@
 FROM centos:7.6.1810
 
 # 切换到工作目录
-WORKDIR /app
+WORKDIR /root
 #COPY set_env.sh /usr/local/bin/set_env.sh
 #RUN chmod +x /usr/local/bin/set_env.sh
 
-RUN yum -y install vim make wget gcc gcc-c++ gtk2 gtk3
+RUN yum -y install vim make wget gcc gcc-c++ gtk2 gtk3 unzip
 
 #安装中文字符包
 RUN localedef -i zh_CN -f UTF-8 zh_CN.UTF-8 && yum -y install kde-l10n-Chinese glibc-common && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8

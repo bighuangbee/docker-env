@@ -17,7 +17,6 @@ docker-compose -f etcd/docker-compose.yml up -d
 docker-compose -f emqx/docker-compose.yml up -d
 
 #Zipkin
-export ZIPKIN_HTTP_PORT=9411
 docker-compose -f zipkin/docker-compose.yml up -d
 
 

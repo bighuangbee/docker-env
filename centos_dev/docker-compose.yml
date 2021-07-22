@@ -7,6 +7,7 @@ services:
     networks:
       - app_net
     volumes:
+      - ~/server/go/demo:/root/demo/ # demo代码
       - ${WORKSPACE_CODE}:/root/workspace/ # 项目代码
       - ${WORKSPACE_CODE}/hidrone/srv/recognize_service/rtc/libs:/root/rtc_recognize/rtc/libs
       - ${WORKSPACE_CODE}/hidrone/srv/recognize_service/face/libs:/root/rtc_recognize/face/libs

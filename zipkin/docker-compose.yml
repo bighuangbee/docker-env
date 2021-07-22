@@ -6,7 +6,7 @@ services:
     networks:
       - hidrone_net
     ports:
-      - ${ZIPKIN_HTTP_PORT}:9411
+      - 9411:9411
 
 networks:
   hidrone_net:
