@@ -22,7 +22,7 @@ then
     mkdir -p $backup_dir;
 fi
 
-#测试  mysqldump --column-statistics=0 --opt --single-transaction --master-data=2 -R -h 172.17.0.1 -P 3308 -uroot -p123456 hidrone > /root/mysqlbackup/11.sql
+#测试  mysqldump  --opt --single-transaction --master-data=2 -R -h 172.17.0.1 -P 3308 -uroot -p123456 hidrone > /root/mysqlbackup/11.sql
 $tool --column-statistics=0 --opt --single-transaction --master-data=2 -R -h$dbhost -P $dbport -u $dbuser -p$dbpasswd  $dbname > $backup_dir/$dbname-$dd.sql
 
 #写创建备份日志
