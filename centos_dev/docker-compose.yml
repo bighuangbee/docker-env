@@ -9,8 +9,8 @@ services:
     volumes:
       - ~/server/go/demo:/root/demo/ # demo代码
       - ${WORKSPACE_CODE}:/root/workspace/ # 项目代码
-      - ${WORKSPACE_CODE}/hidrone/srv/recognize_service/rtc/libs:/root/rtc_recognize/rtc/libs
-      - ${WORKSPACE_CODE}/hidrone/srv/recognize_service/face/libs:/root/rtc_recognize/face/libs
+      - ${WORKSPACE_CODE}/hidrone/svc/recognition/rtc/libs:/root/rtc_recognize/rtc/libs # /root/rtc_recognize为镜像打包固定目录
+      - ${WORKSPACE_CODE}/hidrone/svc/recognition/face/libs:/root/rtc_recognize/face/libs
       - /data/hiDrone/recognize:/data/recognize
     tty: true
     environment:
